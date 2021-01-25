@@ -1,0 +1,29 @@
+<%- include('../../partials/header.ejs') %> 
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({selector:'textarea', language: 'pt_BR', plugins: ['advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons']});</script>
+
+<script>    
+</script>
+
+<div class="container"> 
+    <div class="card mt-5">
+        <div class="card-header">
+            <h2>Login de usuário</h2> 
+        </div>
+
+        <div class="card-body">
+            <form action="/admin/user/login" method="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="email@mail.com">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="******">
+                <button class="btn btn-success mt-5">Logar</button>
+            </form>
+        </div>
+
+         
+    </div>
+</div>
+
+<%- include('../../partials/footer.ejs') %>
